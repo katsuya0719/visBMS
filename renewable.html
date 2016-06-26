@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lines</title>
+    <link rel="stylesheet" type="text/css" href="static/vendor/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <script type="text/javascript" src="static/vendor/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/vendor/js/d3.js"></script>
+    <script type="text/javascript" src="static/vendor/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="static/vendor/js/crossfilter.js"></script>
+    <script type="text/javascript" src="static/vendor/js/dc.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The Green Atrium</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">HOME<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">GF Data</a></li>
+        <li><a href="#">1F Data</a></li>
+        <li><a href="#">2F Data</a></li>
+        <li class="active"><a href="renewable.html">Renewable Energy</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+    <h4>Time Series Data</h4>
+        <div class="col-md-12" id="dc-time-chart">    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6" id="dc-pv-month">  
+        <h5>Monthly PV Generation</h5>  
+        </div>
+        <div class="col-md-6" id="dc-rad-month">    
+        <h5>Monthly Solar Radiation</h5>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="time-series">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="brush">
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            Monthly Energy Consumption</br>
+            Monthly Energy Generation
+        </div>
+
+        <div class="col-md-6">
+            Scatter plot to look at correlation
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    
+</div>
+<script type="text/javascript" src="static/js/brush2.js"></script>
+<script type="text/javascript" src="static/js/dc-graph.js"></script>
+<script type="text/javascript" src="static/js/jquery-function.js"></script>
+
+</body>
+
+</html>

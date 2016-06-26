@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lines</title>
+    <link rel="stylesheet" type="text/css" href="static/vendor/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <script type="text/javascript" src="static/vendor/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/vendor/js/d3.js"></script>
+    <script type="text/javascript" src="static/vendor/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="static/vendor/js/crossfilter.js"></script>
+    <script type="text/javascript" src="static/vendor/js/dc.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">The Green Atrium</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">HOME<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">GF Data</a></li>
+        <li><a href="#">1F Data</a></li>
+        <li><a href="#">2F Data</a></li>
+        <li><a href="renewable.html">Renewable Energy</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row">
+    <h4>The Green Atrium sustainability features</h4>
+        <div class="col-md-4">
+            <a href="#" class="thumbnail">
+              <img src="static/img/overview.png" alt="img1">
+            </a>
+        </div>
+        <div class="col-md-4" id="features">
+            <h4>Energy</h4>
+            <h5>-To demonstrate the appropriate low energy strategies ranging from passive,active,regeneration to operation-</h5>
+            <ol style="list-style-type: decimal">
+                <li>PV</li>
+                <li>Wind Turbine</li>
+                <li>Eco-Atrium</li>
+            </ol>
+
+        </div>
+        <div class="col-md-4" id="image">
+
+        </div>
+    </div>
+    <div class="row">
+        <form name="myForm">
+            <input id="radio1" type="radio" name="myRadio" value="9" checked="checked" onclick="changeRadio()"/>
+            <label for="radio1">2015/9</label>
+            <input id="radio2" type="radio" name="myRadio" value="10" onclick="changeRadio()"/>
+            <label for="radio1">2015/10</label>
+            <input id="radio3" type="radio" name="myRadio" value="11" onclick="changeRadio()"/>
+            <label for="radio1">2015/11</label>
+            <input id="radio4" type="radio" name="myRadio" value="12" onclick="changeRadio()"/>
+            <label for="radio1">2015/12</label>
+            <input id="radio5" type="radio" name="myRadio" value="1" onclick="changeRadio()"/>
+            <label for="radio1">2016/1</label>
+            <input id="radio6" type="radio" name="myRadio" value="2" onclick="changeRadio()"/>
+            <label for="radio1">2016/2</label>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="brush">    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="heat-map">    
+        </div>
+        <div id="dataset-picker"></div>
+    </div>
+
+<script type="text/javascript" src="static/js/brush.js"></script>
+<script type="text/javascript" src="static/js/heatmap.js"></script>
+<script type="text/javascript" src="static/js/jquery-function.js"></script>
+
+</body>
+
+</html>

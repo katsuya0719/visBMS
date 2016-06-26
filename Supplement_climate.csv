@@ -1,0 +1,9 @@
+,Date / Time,1F RESTANRANT-DAY-FL.Trend - Present Value (Trend1),2F & RF-DAY-FL.Trend - Present Value (Trend1),CWP-DAY-FL.Trend - Present Value (Trend1),DC-PV-KW.Trend - Present Value (Trend1),DC-PV-KWh.Trend - Present Value (Trend1),FWP-DAY-FL.Trend - Present Value (Trend1),IRRIGATION-DAY-FL.Trend - Present Value (Trend1),IRWP-DAY-FL.Trend - Present Value (Trend1),RWP-DAY-FL.Trend - Present Value (Trend1),SHOP F-DAY-FL.Trend - Present Value (Trend1),Weather-OH.Trend - Present Value (Trend1),Weather-OT.Trend - Present Value (Trend1),Weather-SR.Trend - Present Value (Trend1),Weather-WD.Trend - Present Value (Trend1),Weather-WS.Trend - Present Value (Trend1),Wind Power-1-KW.Trend - Present Value (Trend1),Wind Power-1-KWh.10 Min Trend - Present Value (Trend1),Wind Power-2-KW.Trend - Present Value (Trend1),Wind Power-2-KWh.Trend - Present Value (Trend1),Wind Power-3-KW.Trend - Present Value (Trend1),Wind Power-3-KWh.Trend - Present Value (Trend1)
+Column,Date / Time,1F_Tenant Water,2F&RF_ Water,CWP_Water,PV [W],PV[kWh],FWP_Water,Irrigation_Water,IRWP_Water,RWP_Water,GF_Tenant Water,RH[%],Temp[C],Radiation[W],Wind Direction[deg],Wind Speed[m/s],Wind Turbine1[W],Wind Turbine1[kWh],Wind Turbine2[W],Wind Turbine2[kWh],Wind Turbine3[W],Wind Turbine3[kWh]
+Frequency,-,,,,10,10,,,,,,5,5,5,5,10,1,,,,,
+Accumulate,-,,,,FALSE,TRUE,,,,,,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,
