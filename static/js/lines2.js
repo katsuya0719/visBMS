@@ -20,26 +20,16 @@
 
 	var xAxis = d3.svg.axis()
 	            .scale(x)
-	            .orient("bottom"),
-      xAxis2 = d3.svg.axis()
-              .scale(x2)
-              .orient("bottom");          
+	            .orient("bottom");     
 	                
 	var yAxis = d3.svg.axis()
 	            .scale(y)
 	            .orient("left");
 
-  var brush = d3.svg.brush()
-              .x(x2)
-              .on("brush",brushed)
-
 	var line = d3.svg.line() 
 	            .x(function(d){return x(d.date);})
 	            .y(function(d){return y(d.energy);});
 
-  var line2 = d3.svg.line() 
-              .x(function(d){return x2(d.date);})
-              .y(function(d){return y2(d.energy);});
 
 	var svg = d3.select("#brush").append("svg")
 				.attr("width", width + margin.left + margin.right)
@@ -57,10 +47,6 @@
               .attr("class","focus")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  var context = svg.append("g")
-              .attr("class","context")
-              .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
-
 function setData(month){
   d3.csv("static/csv/1509-1602_1h.csv", function (data) {
   	data.forEach(function(d) {
@@ -72,6 +58,7 @@ function setData(month){
     data=data.filter(function(d){
       return d.month == month
     })
+    console.log(data);
     drawGraph(data)
   });
 };
@@ -87,15 +74,13 @@ function drawGraph(data){
         })
       };
     });
-  //console.log(energies)
+  console.log(energies)
   	x.domain(d3.extent(data, function(d) { return d.datetime; }));
     //console.log(x.domain())
   	y.domain([
       d3.min(energies, function(c) { return d3.min(c.values, function(v) { return v.energy; }); }),
       d3.max(energies, function(c) { return d3.max(c.values, function(v) { return v.energy; }); })
     ]);
-    x2.domain(x.domain());
-    y2.domain(y.domain());
   //};
 
 	focus.append("g")
@@ -113,29 +98,11 @@ function drawGraph(data){
     　.style("text-anchor", "end")
     　.text("Consumption [W]");
 
-  context.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height2 + ")")
-      .call(xAxis2);
-
-  context.append("g")
-      .attr("class", "x brush")
-      .call(brush)
-    .selectAll("rect")
-      .attr("y", -6)
-      .attr("height", height2 + 7);
-
   energies.forEach(function(d){
     focus.append("path")
         .datum(d)  
         .attr("class","line")
         .attr("d",function(d){return line(d.values);})
-        .style("stroke", function(d) { return color(d.name); });
-
-    context.append("path")
-        .datum(d)  
-        .attr("class","line")
-        .attr("d",function(d){return line2(d.values);})
         .style("stroke", function(d) { return color(d.name); });
     
   });
@@ -232,13 +199,4 @@ function updateGraph(energies){
             .duration(750)
             .call(yAxis);
   });
-};
-
-function brushed() {
-  x.domain(brush.empty() ? x2.domain() : brush.extent());
-  console.log(x.domain())
-  //xがupdate
-  //focus.select(".line").attr("d",function(d){return line(d.values);});
-  focus.select(".line").attr("d",line);
-  focus.select(".x.axis").call(xAxis);
 };
