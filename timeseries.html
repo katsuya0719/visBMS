@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Heat map</title>
+    <link rel="stylesheet" type="text/css" href="static/vendor/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/bar.css"/>
+    <script type="text/javascript" src="static/vendor/js/d3.js"></script>
+    <script type="text/javascript" src="static/vendor/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="static/vendor/js/jquery-2.2.3.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+    <h3>Timeseries Data</h3>
+    </div>
+    <div class="row">
+        <form name="myForm">
+            <input id="radio1" type="radio" name="myRadio" value="9" checked="checked" onclick="changeRadio()"/>
+            <label for="radio1">2015/9</label>
+            <input id="radio2" type="radio" name="myRadio" value="10" onclick="changeRadio()"/>
+            <label for="radio1">2015/10</label>
+            <input id="radio3" type="radio" name="myRadio" value="11" onclick="changeRadio()"/>
+            <label for="radio1">2015/11</label>
+            <input id="radio4" type="radio" name="myRadio" value="12" onclick="changeRadio()"/>
+            <label for="radio1">2015/12</label>
+            <input id="radio5" type="radio" name="myRadio" value="1" onclick="changeRadio()"/>
+            <label for="radio1">2016/1</label>
+            <input id="radio6" type="radio" name="myRadio" value="2" onclick="changeRadio()"/>
+            <label for="radio1">2016/2</label>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="brush">    
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="static/js/brush.js"></script>
+
+</body>
+
+</html>
