@@ -17,7 +17,7 @@
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  //test
+  
   var dayLabels = svg.selectAll(".dayLabel")
       .data(days)
       .enter().append("text")
